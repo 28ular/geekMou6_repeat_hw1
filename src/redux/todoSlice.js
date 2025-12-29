@@ -14,13 +14,6 @@ export const todoSlice = createSlice({
             state.todo.push({ id: Date.now(), name: state.input, completed: false });
             state.input = '';
         },
-        toggleTodo: (state, action) => {
-            const todoItem = state.todo.find(item => item.id === action.payload);
-            if (todoItem) todoItem.completed = !todoItem.completed;
-        },
-        deleteTodo: (state, action) => {
-            state.todo = state.todo.filter(item => item.id !== action.payload);
-        }
     }
 });
 

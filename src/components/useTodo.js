@@ -12,6 +12,7 @@ export const useTodo = create((set) => ({
             ...state.todo,
             {id: Date.now() , name , completed: false},
         ],
+
         input: ''
     }))
 
